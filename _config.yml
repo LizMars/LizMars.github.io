@@ -1,0 +1,38 @@
+# Site settings
+
+title: Yuliia's Adventures
+email: lm.julia92@gmail.com
+description: >
+  Пригоди звичайної української дівчини в Америці
+url: "http://lizmars.github.io" # the base hostname & protocol for your site
+
+
+# Custom site variables
+
+author: "Yuliia Synytsia"
+
+# Build settings
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+permalink: /posts/:title
+markdown: kramdown
+
+gems:
+  - jekyll-sitemap
+  - jekyll-feed
+
+sass:
+  style: :compressed
+
+exclude:
+  - README.md
+  - LICENSE
+  - CNAME
+  - Makefile
