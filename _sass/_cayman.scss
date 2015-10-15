@@ -3,6 +3,10 @@ $medium-breakpoint: 42em;
 
 $link-hover-color: darken(#1e6bb8, 10%);
 
+@mixin font-mono {
+    font-family: "Consolas", monospace;
+}
+
 @mixin large {
     @media screen and (min-width: #{$large-breakpoint}) {
         @content;
@@ -367,4 +371,25 @@ header {
 
 .site-footer-credits {
     color: #819198;
+}
+
+.date {
+    @include font-mono;
+    font-size: 1.7ex;
+    padding-right: 1ex;
+}
+
+.home {
+  ul {
+    list-style-type: none;
+    margin-top: 1em;
+  }
+    li {
+      font-weight: 300;
+      padding-bottom: 1ex;
+      a {
+        display: block;
+        font-size: 1.5em;
+      }
+    }
 }
