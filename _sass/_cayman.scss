@@ -1,6 +1,8 @@
 $large-breakpoint: 64em;
 $medium-breakpoint: 42em;
 
+$link-hover-color: darken(#1e6bb8, 10%);
+
 @mixin large {
     @media screen and (min-width: #{$large-breakpoint}) {
         @content;
@@ -42,9 +44,8 @@ nav {
 a {
     color: #1e6bb8;
     text-decoration: none;
-
     &:hover {
-        text-decoration: underline;
+        color: $link-hover-color;
     }
 }
 
@@ -152,7 +153,15 @@ a {
 }
 
 header {
-    text-align: justify;
+    text-align: left;
+
+    a {
+        color: #159957;
+        text-decoration: none;
+        &:hover {
+            color: $link-hover-color;
+        }
+    }
 }
 
 .main-content {
