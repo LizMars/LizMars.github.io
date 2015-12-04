@@ -3,16 +3,25 @@ layout: default
 ---
 
 {% for post in site.posts limit:1 %}
-  <h1>{{ post.title }}</h1>
+<header>
+  <h1><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h1>
+</header>
+<span class="date">
+  <i class="fa fa-calendar"></i>
+  {{ post.date | date: "%Y-%m-%d" }}
+</span>
 
   {{ post.content }}
 {% endfor %}
 
 <hr>
-<ul>
+<ul class="home">
   {% for post in site.posts offset:1 %}
   <li>
-    <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+    <span class="date"> <i class="fa fa-calendar"></i>
+      {{ post.date | date: "%Y-%m-%d" }}
+    </span>
+    <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
   </li>
   {% endfor %}
 </ul>
